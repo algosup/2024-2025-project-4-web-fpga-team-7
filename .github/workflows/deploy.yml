@@ -11,7 +11,7 @@ env:
 
 jobs:
   build-and-test:
-    runs-on: self-hosted # Use Windows runner
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -37,7 +37,7 @@ jobs:
 
   docker-build-and-push:
     needs: build-and-test
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
